@@ -21,6 +21,6 @@ return [
         'model'      => ['User', 'UserType'],
         'view'       => ['index/index'],
     ],
-
+123123
     // 其他更多的模块定义
 ];
