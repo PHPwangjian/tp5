@@ -1,0 +1,50 @@
+{extend name="public/base" /}
+
+{block name="content"}
+<div class="bg"></div>
+<div class="container">
+    <div class="line bouncein">
+        <div class="xs6 xm4 xs3-move xm4-move">
+            <div style="height:150px;"></div>
+            <div class="media media-y margin-big-bottom">
+            </div>
+            <form action="/login" method="post" id="form">
+                <div class="panel loginbox">
+                    <div class="text-center margin-big padding-big-top"><h1>在线主题管理中心</h1></div>
+                    <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
+                        <div class="form-group">
+                            <div class="field field-icon-right">
+                                <input type="text" class="input input-big" name="user_name" placeholder="登录账号" datatype="s4-10" />
+                                <span class="icon icon-user margin-small"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="field field-icon-right">
+                                <input type="password" class="input input-big" name="password" placeholder="登录密码" datatype="s6-8" />
+                                <span class="icon icon-key margin-small"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div style="padding:30px;"><input type="submit" class="button button-block bg-main text-big input-big" value="登录"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $("#form").Validform({
+        tiptype:4,
+        ajaxPost:true,
+        callback:function(res){
+            if(res.status=='success'){
+                layer.msg(res.msg,{icon:1});
+                location.href='/addTheme';
+            }else{
+                layer.msg(res.msg,{icon:2});
+            }
+        }
+    });
+</script>
+{/block}
