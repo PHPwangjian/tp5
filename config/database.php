@@ -16,7 +16,7 @@ return [
     'hostname'        => '192.168.1.32',
 
     // 数据库名
-    'database'        => 'root',
+    'database'        => 'zentao',
     // 用户名
     'username'        => 'root',
     // 密码
