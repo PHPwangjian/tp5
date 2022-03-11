@@ -39,6 +39,6 @@ class Jobtest{
         }
     }
     public   function  wj(){
-        echo '测试提交';
+        echo 111;
     }
 }
